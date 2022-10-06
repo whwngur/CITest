@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3D580F3F1F9991D708F4A38 /* Pods_CITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BD1543BEA4BE383F4FFC48 /* Pods_CITest.framework */; };
 		BD32781A28E57AC000FD97AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32781928E57AC000FD97AF /* AppDelegate.swift */; };
 		BD32781C28E57AC000FD97AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32781B28E57AC000FD97AF /* SceneDelegate.swift */; };
 		BD32781E28E57AC000FD97AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32781D28E57AC000FD97AF /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D2D9F5B8DE458C99C2903C7 /* Pods-CITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CITest.release.xcconfig"; path = "Target Support Files/Pods-CITest/Pods-CITest.release.xcconfig"; sourceTree = "<group>"; };
+		94BD1543BEA4BE383F4FFC48 /* Pods_CITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE6678A222429D40ACEDB6B /* Pods-CITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CITest.debug.xcconfig"; path = "Target Support Files/Pods-CITest/Pods-CITest.debug.xcconfig"; sourceTree = "<group>"; };
 		BD32781628E57AC000FD97AF /* CITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD32781928E57AC000FD97AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD32781B28E57AC000FD97AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D580F3F1F9991D708F4A38 /* Pods_CITest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41A93BCB811A4414B31D0E43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6678A222429D40ACEDB6B /* Pods-CITest.debug.xcconfig */,
+				6D2D9F5B8DE458C99C2903C7 /* Pods-CITest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B41D0FA9955E257F0366239A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94BD1543BEA4BE383F4FFC48 /* Pods_CITest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD32780D28E57AC000FD97AF = {
 			isa = PBXGroup;
 			children = (
 				BD32781828E57AC000FD97AF /* CITest */,
 				BD32781728E57AC000FD97AF /* Products */,
+				41A93BCB811A4414B31D0E43 /* Pods */,
+				B41D0FA9955E257F0366239A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD32782A28E57AC100FD97AF /* Build configuration list for PBXNativeTarget "CITest" */;
 			buildPhases = (
+				F6FADE7A63CE8FBD5B5E1E0C /* [CP] Check Pods Manifest.lock */,
 				BD32781228E57AC000FD97AF /* Sources */,
 				BD32781328E57AC000FD97AF /* Frameworks */,
 				BD32781428E57AC000FD97AF /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6FADE7A63CE8FBD5B5E1E0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CITest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD32781228E57AC000FD97AF /* Sources */ = {
@@ -216,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +333,7 @@
 		};
 		BD32782B28E57AC100FD97AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE6678A222429D40ACEDB6B /* Pods-CITest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +362,7 @@
 		};
 		BD32782C28E57AC100FD97AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D2D9F5B8DE458C99C2903C7 /* Pods-CITest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
